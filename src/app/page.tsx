@@ -1,12 +1,18 @@
-import Head from "next/head"
 import {Seo} from "@/ui/components/seo/Seo"
+import {Typography} from '@/ui/design-system/typography/Typography'
+
 export default function Home() {
   return (
     <>
       <Seo title={"Coders Monkeys"} description={"description"}/>
       
       <main>
-        <h1 className={"text-[90px] uppercase"}>This the main page</h1>
+        <Typography variant={"display"} >
+          Coders Monkeys
+        </Typography>
+        <Typography variant={"h1"}>
+          Coders Monkeys
+        </Typography>
       </main>
     </>
   )
