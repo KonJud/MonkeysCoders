@@ -7,12 +7,16 @@ export default function Home() {
       <Seo title={"Coders Monkeys"} description={"description"}/>
       
       <main>
-        <Typography variant={"display"} >
+        <Typography theme={"primary"} variant={"display"}>
           Coders Monkeys
         </Typography>
-        <Typography variant={"h1"}>
+        <Typography theme={"secondary"} variant={"h1"} >
           Coders Monkeys
         </Typography>
+        <Typography theme={"gray"} variant={"h2"} >
+          Coders Monkeys
+        </Typography>
+        
       </main>
     </>
   )
