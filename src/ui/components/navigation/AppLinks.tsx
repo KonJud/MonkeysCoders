@@ -1,3 +1,5 @@
+import { RiLinkedinFill, RiYoutubeFill, RiFacebookFill} from 'react-icons/ri'
+
 import { TypeAppLinks, TypeFooterLinks } from "@/types/AppLinks";
 
 
@@ -67,21 +69,24 @@ const InformationsLinks: TypeAppLinks[] = [
         type: "internal"
     }
 ]
-const SocialNetworkLinks: TypeAppLinks[] = [
+export const SocialNetworkLinks: TypeAppLinks[] = [
     {
         label: "Linkedin",
         baseUrl: "/#",
-        type: "external"
+        type: "external",
+        icon: RiLinkedinFill
     },
     {
         label: "Youtube",
         baseUrl: "/#",
-        type: "external"
+        type: "external",
+        icon: RiYoutubeFill
     },
     {
-        label: "Slack",
+        label: "Facebook",
         baseUrl:"/#",
-        type: "external"
+        type: "external",
+        icon: RiFacebookFill
     }
 ]
 

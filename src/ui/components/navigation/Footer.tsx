@@ -9,6 +9,7 @@ import Image from "next/image"
 import { ActiveLink } from './ActiveLink'
 
 import { LinkType } from '@/lib/LinkType'
+import { SocialsNetworkButton } from './SocialsNetworkButton'
 
 
 export const Footer = () => {
@@ -16,13 +17,18 @@ export const Footer = () => {
     
     const currentYear = new Date().getFullYear() // Pour maintenir à jour la date dans le copyRight
 
+    // le map pour gérer les différents liens de navigation qui sont dans le Footer
     const footerLinks = FooterLinks.map((footerLink) => (
         <FooterLink key={uuidv4()} data={footerLink} />
     ))
 
     return(
         <div className={"bg-gray"}>
+
+            {/* Premier niveau du footer */}
             <Container className={"flex justify-between pt-16"} >
+
+                    {/* Lien pour la redirection à la chaine youtube */}
                     <div className={"flex flex-col items-center gap-1"}>
                         <Typography
                             variant={"caption1"}
@@ -46,13 +52,18 @@ export const Footer = () => {
                             />
                         </a>
                     </div>
-
+                    
+                    {/* Liens de navigation dans le Footer */}
                     <div className={"text-white flex gap-7"}>
                         {footerLinks}
                     </div>
             </Container>
+
+            {/* Tout dernier niveau du Footer */}
             <Container className={"pt-9 pb-11 space-y-11"} >
                 <hr className={"text-gray-800"} />
+
+                {/* CopyRight */}
                 <div className={"flex items-center justify-between"}>
                     <Typography
                         variant={"caption4"}
@@ -60,8 +71,10 @@ export const Footer = () => {
                     >
                         {`Copyright © ${currentYear} | Propulsed by Arnaud desportes - Remote monkey SASU`}
                     </Typography>
-                    <div className="">
 
+                    {/* Bouttons Réseau Sociaux */}
+                    <div className="">
+                        <SocialsNetworkButton theme={"gray"} />
                     </div>
                 </div>
             </Container>
@@ -70,7 +83,7 @@ export const Footer = () => {
 }
 
 
-
+// COMPOSANT POUR MAPER TOUS LES LIENS DU FOOTER AINSI QUE LEURS TITRES
 interface FooterLinkProps {
     data: TypeFooterLinks,
 }
